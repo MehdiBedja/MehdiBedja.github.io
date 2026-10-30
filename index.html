@@ -45,7 +45,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .burger{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
 
 .hero{min-height:calc(100vh - 64px);display:flex;align-items:center;padding:60px 0}
-.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.hero-grid{max-width:760px}
 .badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--muted);background:var(--bg2);margin-bottom:28px}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(124,242,201,.6)}70%{box-shadow:0 0 0 10px rgba(124,242,201,0)}100%{box-shadow:0 0 0 0 rgba(124,242,201,0)}}
@@ -103,7 +103,7 @@ section{padding:110px 0}
 .proj:hover::after{opacity:1}
 .proj.feat{grid-column:1/-1;background:linear-gradient(135deg,#0f1a1a,#0f141b 60%)}
 .proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
-.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(124,242,201,.08);color:var(--accent);font-size:22px}
+.ico{color:var(--accent);font-size:13px;letter-spacing:.05em}
 .proj-links{display:flex;gap:14px;color:var(--muted)}
 .proj-links a:hover{color:var(--accent)}
 .proj-links svg{width:20px;height:20px}
@@ -186,11 +186,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
     <div>
       <img class="avatar" src="https://avatars.githubusercontent.com/u/119514351?v=4" alt="Mahdi Bedja">
       <div class="badge"><span class="dot"></span>Open to a PFE internship in applied AI · from March 2027</div>
-      <h1>Hi, I'm <span class="grad">Mahdi Bedja</span>.</h1>
-      <div class="role">I build <b id="typed"></b><span class="caret"></span></div>
-      <p class="lead">AI Engineer based in Paris. ESI Algiers engineering graduate, now in a Master 2 in Intelligent Systems at Sorbonne Paris Nord. I ship AI from research to production: medical imaging, speech recognition, LLM agents and on-device vision.</p>
+      <h1>Mahdi Bedja</h1>
+      <div class="role"><b>AI Engineer</b> · computer vision, speech recognition, LLMs</div>
+      <p class="lead">Based in Paris. I graduated from ESI Algiers and I'm now doing a Master 2 in Intelligent Systems at Sorbonne Paris Nord. Most of my work so far has been in medical AI: imaging, speech recognition and LLM-based tools for clinicians.</p>
       <div class="cta">
-        <a class="btn primary" href="#projects">View my work →</a>
+        <a class="btn primary" href="#projects">Projects</a>
         <a class="btn ghost" href="mailto:mahdibedja@gmail.com">Get in touch</a>
       </div>
       <div class="socials">
@@ -199,20 +199,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
         <a href="mailto:mahdibedja@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
       </div>
     </div>
-    <div class="term reveal">
-      <div class="term-top"><i></i><i></i><i></i></div>
-<pre><span class="c"># mahdi.py</span>
-<span class="k">class</span> <span class="s">AIEngineer</span>:
-    name     = <span class="s">"Mahdi Bedja"</span>
-    location = <span class="s">"Paris, France"</span>
-    school   = [<span class="s">"ESI Algiers"</span>, <span class="s">"Sorbonne Paris Nord"</span>]
-    focus    = [<span class="s">"Computer Vision"</span>, <span class="s">"Speech / ASR"</span>,
-                <span class="s">"LLMs & Agentic RAG"</span>, <span class="s">"Edge AI"</span>]
-    langs    = [<span class="s">"EN C1"</span>, <span class="s">"FR C1"</span>, <span class="s">"AR native"</span>]
 
-    <span class="k">def</span> <span class="s">available</span>(self):
-        <span class="k">return</span> <span class="s">"PFE internship · March 2027"</span></pre>
-    </div>
   </div>
 </header>
 
@@ -241,7 +228,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
     <div class="exp">
       <div class="job reveal">
         <div class="job-h"><h3>AI Engineer <span>@ BM TECH</span></h3><span class="when">Nov 2025 — Aug 2026</span></div>
-        <div class="sub">Algiers, Algeria · Software for medical laboratories and public & private hospitals</div>
+        <div class="sub">Algiers, Algeria · Software for medical laboratories and public & private hospitals. The code is proprietary, so it isn't on my GitHub.</div>
         <ul>
           <li><b>Medical imaging:</b> detection, segmentation & classification pipelines for <span class="hl">14 lung pathologies</span> on chest X-rays (YOLO, CNN), plus a separate bone-fracture detection pipeline.</li>
           <li><b>French medical ASR:</b> built a synthetic speech dataset with Qwen3 voice cloning from real radiology reports, then fine-tuned Whisper to <span class="hl">3% WER</span>.</li>
@@ -267,12 +254,12 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="n">03.</span><h2>Things I've built</h2><span class="ln"></span></div>
+    <div class="sec-head reveal"><span class="n">03.</span><h2>Projects</h2><span class="ln"></span></div>
     <div class="projects">
       <article class="proj feat reveal">
         <div class="feat-grid">
           <div>
-            <div class="proj-top"><div class="ico">🌾</div>
+            <div class="proj-top"><div class="ico mono">01</div>
               <div class="proj-links"><a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
             </div>
             <p class="mono" style="color:var(--accent);font-size:12px;flex:0;margin-bottom:8px">FEATURED · ENGINEERING THESIS</p>
@@ -282,16 +269,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
             <div class="tags"><span>PyTorch</span><span>Ultralytics</span><span>TFLite</span><span>Kotlin</span><span>Jetpack Compose</span><span>Django</span><span>PostgreSQL</span><span>Cloudinary</span></div>
           </div>
           <div class="repo-list">
-            <a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" rel="noopener noreferrer"><span>📦 pest-detection-system</span><small>overview</small></a>
-            <a href="https://github.com/MehdiBedja/pest-detection-computer-vision" target="_blank" rel="noopener noreferrer"><span>🧠 pest-detection-computer-vision</span><small>AI research</small></a>
-            <a href="https://github.com/MehdiBedja/pest-detection-android" target="_blank" rel="noopener noreferrer"><span>📱 pest-detection-android</span><small>Kotlin</small></a>
-            <a href="https://github.com/MehdiBedja/pest-detection-api" target="_blank" rel="noopener noreferrer"><span>⚙️ pest-detection-api</span><small>Django</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" rel="noopener noreferrer"><span>pest-detection-system</span><small>overview</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-computer-vision" target="_blank" rel="noopener noreferrer"><span>pest-detection-computer-vision</span><small>AI research</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-android" target="_blank" rel="noopener noreferrer"><span>pest-detection-android</span><small>Kotlin</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-api" target="_blank" rel="noopener noreferrer"><span>pest-detection-api</span><small>Django</small></a>
           </div>
         </div>
       </article>
 
       <article class="proj reveal">
-        <div class="proj-top"><div class="ico">⚖️</div>
+        <div class="proj-top"><div class="ico mono">02</div>
           <div class="proj-links"></div>
         </div>
         <h3>Intelligent Legal Monitoring + LLM Chatbot</h3>
@@ -300,7 +287,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       </article>
 
       <article class="proj reveal">
-        <div class="proj-top"><div class="ico">🐘</div>
+        <div class="proj-top"><div class="ico mono">03</div>
           <div class="proj-links"><a href="https://github.com/MehdiBedja/event-ticketing-postgres" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Automated PostgreSQL CI/CD with Jenkins</h3>
@@ -309,7 +296,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       </article>
 
       <article class="proj reveal">
-        <div class="proj-top"><div class="ico">📄</div>
+        <div class="proj-top"><div class="ico mono">04</div>
           <div class="proj-links"><a href="https://github.com/MehdiBedja/docx-certificate-generator" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Automated Document Filling</h3>
@@ -318,7 +305,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       </article>
 
       <article class="proj reveal">
-        <div class="proj-top"><div class="ico">📅</div>
+        <div class="proj-top"><div class="ico mono">05</div>
           <div class="proj-links"><a href="https://github.com/MehdiBedja/parking-reservation-android" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Parking Reservation App</h3>
@@ -326,7 +313,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
         <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Django REST</span><span>Retrofit</span></div>
       </article>
     </div>
-    <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="https://github.com/MehdiBedja?tab=repositories" target="_blank" rel="noopener noreferrer">See all repositories on GitHub →</a></div>
+    <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="https://github.com/MehdiBedja?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories on GitHub</a></div>
   </div>
 </section>
 
@@ -354,9 +341,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       </div>
     </div>
     <div class="langs reveal">
-      <div class="lang"><b>🇬🇧 English, C1</b><span>IELTS 7.5</span></div>
-      <div class="lang"><b>🇫🇷 French, C1</b><span>TCF C1</span></div>
-      <div class="lang"><b>🇩🇿 Arabic</b><span>Native</span></div>
+      <div class="lang"><b>English, C1</b><span>IELTS 7.5</span></div>
+      <div class="lang"><b>French, C1</b><span>TCF C1</span></div>
+      <div class="lang"><b>Arabic</b><span>Native</span></div>
     </div>
   </div>
 </section>
@@ -364,11 +351,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap contact reveal">
-    <span class="mono" style="color:var(--accent)">05. What's next?</span>
-    <h2>Let's build something intelligent.</h2>
-    <p>I'm looking for a final-year internship (PFE) in applied AI starting <b style="color:var(--text)">March 1, 2027</b>. If you're working on vision, speech or LLM systems, I'd love to talk.</p>
+    <span class="mono" style="color:var(--accent)">05. Contact</span>
+    <h2>Get in touch</h2>
+    <p>I'm looking for a final-year internship (PFE) in applied AI starting <b style="color:var(--text)">March 1, 2027</b>. Feel free to reach out by email or LinkedIn.</p>
     <div class="cta">
-      <a class="btn primary" href="mailto:mahdibedja@gmail.com">✉ mahdibedja@gmail.com</a>
+      <a class="btn primary" href="mailto:mahdibedja@gmail.com">mahdibedja@gmail.com</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a class="btn ghost" href="cv_eg.pdf" target="_blank" rel="noopener noreferrer">CV (EN)</a>
       <a class="btn ghost" href="cv_fr.pdf" target="_blank" rel="noopener noreferrer">CV (FR)</a>
@@ -391,12 +378,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const links=document.getElementById('links'),burger=document.getElementById('burger');
 burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
 links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')});
-// typewriter
-const words=["medical imaging AI.","speech recognition systems.","Agentic RAG with local LLMs.","on-device computer vision.","AI that ships to production."];
-let w=0,i=0,del=false;const t=document.getElementById('typed');
-(function tick(){const cur=words[w];t.textContent=cur.slice(0,i);
- if(!del&&i<cur.length){i++;setTimeout(tick,55)}else if(!del){del=true;setTimeout(tick,1600)}
- else if(i>0){i--;setTimeout(tick,28)}else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}})();
+
 
 // neural network background
 (()=>{const c=document.getElementById('net'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;

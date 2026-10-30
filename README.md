@@ -1,24 +1,18 @@
-# Mahdi Bedja · Portfolio
+# Portfolio
 
-[![Tests](https://github.com/MehdiBedja/MehdiBedja.github.io/actions/workflows/test.yml/badge.svg)](https://github.com/MehdiBedja/MehdiBedja.github.io/actions/workflows/test.yml)
-[![Live](https://img.shields.io/badge/live-mehdibedja.github.io-7cf2c9)](https://mehdibedja.github.io)
+Personal portfolio of Mahdi Bedja, AI Engineer (computer vision, speech recognition, LLMs & Agentic RAG), based in Paris.
 
-Personal portfolio of **Mahdi Bedja**, AI Engineer (computer vision, speech recognition, LLMs & Agentic RAG), based in Paris.
-
-**Live site: https://mehdibedja.github.io**
-
-![Hero section](docs/screenshots/hero.png)
-<!-- Screenshot placeholder: add docs/screenshots/hero.png (1600x900 recommended) -->
+Live site: https://mehdibedja.github.io
 
 ## What it does
 
 A fast, single-page portfolio with no dependencies that presents:
 
-- **About**: profile summary and key results (93.8% mAP@50, 3% WER, 14 lung pathologies)
-- **Experience**: AI Engineer at BM TECH (medical imaging, medical ASR, Agentic RAG), Engineering Intern at CM Consulting
-- **Projects**: featured mobile pest detection system plus other projects, linked to their GitHub repositories
-- **Skills & education**: Sorbonne Paris Nord (M2 Intelligent Systems), ESI Algiers
-- **Contact**: email, LinkedIn and downloadable CV in English and French
+- About: profile summary and key results (93.8% mAP@50, 3% WER, 14 lung pathologies)
+- Experience: AI Engineer at BM TECH (medical imaging, medical ASR, Agentic RAG), Engineering Intern at CM Consulting
+- Projects: featured mobile pest detection system plus other projects, linked to their GitHub repositories
+- Skills & education: Sorbonne Paris Nord (M2 Intelligent Systems), ESI Algiers
+- Contact: email, LinkedIn and downloadable CV in English and French
 
 Features:
 
@@ -81,14 +75,6 @@ flowchart LR
 ├── docs/screenshots/     # README images
 └── .github/workflows/    # CI
 ```
-
-## Screenshots
-
-| Desktop | Mobile |
-| --- | --- |
-| ![Projects section](docs/screenshots/projects.png) | ![Mobile view](docs/screenshots/mobile.png) |
-
-<!-- Screenshot placeholders: add docs/screenshots/projects.png and docs/screenshots/mobile.png -->
 
 ## Contact
 
