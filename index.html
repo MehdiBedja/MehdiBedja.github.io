@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mahdi Bedja — AI Engineer</title>
 <meta name="description" content="Mahdi Bedja — AI Engineer in Paris. Computer vision, speech recognition, LLMs & Agentic RAG. Seeking a final-year AI internship from March 2027.">
+<link rel="canonical" href="https://mehdibedja.github.io/">
+<meta property="og:url" content="https://mehdibedja.github.io/">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Mahdi Bedja — AI Engineer">
 <meta property="og:description" content="Computer vision, medical ASR, Agentic RAG. Seeking a PFE internship in applied AI from March 2027.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/119514351?v=4">
@@ -171,8 +174,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       <a href="#skills"><span class="n">04.</span>Skills</a>
       <a href="#contact"><span class="n">05.</span>Contact</a>
     </div>
-    <a class="btn ghost" href="cv_eg.pdf" target="_blank">Résumé ↓</a>
-    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+    <a class="btn ghost" href="cv_eg.pdf" target="_blank" rel="noopener noreferrer">Résumé ↓</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-controls="links" aria-expanded="false">☰</button>
   </div>
 </nav>
 
@@ -191,8 +194,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
         <a class="btn ghost" href="mailto:mahdibedja@gmail.com">Get in touch</a>
       </div>
       <div class="socials">
-        <a href="https://github.com/MehdiBedja" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-        <a href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+        <a href="https://github.com/MehdiBedja" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+        <a href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
         <a href="mailto:mahdibedja@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
       </div>
     </div>
@@ -270,7 +273,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
         <div class="feat-grid">
           <div>
             <div class="proj-top"><div class="ico">🌾</div>
-              <div class="proj-links"><a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+              <div class="proj-links"><a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
             </div>
             <p class="mono" style="color:var(--accent);font-size:12px;flex:0;margin-bottom:8px">FEATURED · ENGINEERING THESIS</p>
             <h3>Mobile Agricultural Pest Detection System</h3>
@@ -279,17 +282,17 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
             <div class="tags"><span>PyTorch</span><span>Ultralytics</span><span>TFLite</span><span>Kotlin</span><span>Jetpack Compose</span><span>Django</span><span>PostgreSQL</span><span>Cloudinary</span></div>
           </div>
           <div class="repo-list">
-            <a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank"><span>📦 pest-detection-system</span><small>overview</small></a>
-            <a href="https://github.com/MehdiBedja/pest-detection-computer-vision" target="_blank"><span>🧠 pest-detection-computer-vision</span><small>AI research</small></a>
-            <a href="https://github.com/MehdiBedja/pest_detection_app_frontend" target="_blank"><span>📱 pest_detection_app_frontend</span><small>Kotlin</small></a>
-            <a href="https://github.com/MehdiBedja/pest_detection_app_backend" target="_blank"><span>⚙️ pest_detection_app_backend</span><small>Django</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" rel="noopener noreferrer"><span>📦 pest-detection-system</span><small>overview</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-computer-vision" target="_blank" rel="noopener noreferrer"><span>🧠 pest-detection-computer-vision</span><small>AI research</small></a>
+            <a href="https://github.com/MehdiBedja/pest_detection_app_frontend" target="_blank" rel="noopener noreferrer"><span>📱 pest_detection_app_frontend</span><small>Kotlin</small></a>
+            <a href="https://github.com/MehdiBedja/pest_detection_app_backend" target="_blank" rel="noopener noreferrer"><span>⚙️ pest_detection_app_backend</span><small>Django</small></a>
           </div>
         </div>
       </article>
 
       <article class="proj reveal">
         <div class="proj-top"><div class="ico">⚖️</div>
-          <div class="proj-links"><a href="https://github.com/MehdiBedja/elastic_search" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/elastic_search" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Intelligent Legal Monitoring + LLM Chatbot</h3>
         <p>LLM chatbot that answers questions about legal texts, on a Django + React platform. New laws are scraped with Selenium, indexed in Elasticsearch for advanced search, and pushed to subscribers as notifications.</p>
@@ -298,7 +301,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
       <article class="proj reveal">
         <div class="proj-top"><div class="ico">🐘</div>
-          <div class="proj-links"><a href="https://github.com/MehdiBedja/SGBD" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/SGBD" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Automated PostgreSQL CI/CD with Jenkins</h3>
         <p>Automated database delivery: deployed on Render, schema versioned with Flyway migrations, tested with pgTAP, all run through a Jenkins CI/CD pipeline.</p>
@@ -307,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
       <article class="proj reveal">
         <div class="proj-top"><div class="ico">📄</div>
-          <div class="proj-links"><a href="https://github.com/MehdiBedja/AutomateDocsFilling" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/AutomateDocsFilling" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Automated Document Filling</h3>
         <p>Automation pipeline that generates and fills formatted documents from structured data with LaTeX templates, replacing repetitive manual paperwork.</p>
@@ -316,14 +319,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
       <article class="proj reveal">
         <div class="proj-top"><div class="ico">📅</div>
-          <div class="proj-links"><a href="https://github.com/MehdiBedja/Reservation-app-frontend" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/Reservation-app-frontend" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
         </div>
         <h3>Reservation App (Android + Node)</h3>
         <p>Full-stack reservation app: a native Kotlin Android client with dependency injection via Dagger/Hilt, backed by a JavaScript REST API.</p>
         <div class="tags"><span>Kotlin</span><span>Hilt</span><span>Node.js</span><span>REST</span></div>
       </article>
     </div>
-    <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="https://github.com/MehdiBedja?tab=repositories" target="_blank">See all repositories on GitHub →</a></div>
+    <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="https://github.com/MehdiBedja?tab=repositories" target="_blank" rel="noopener noreferrer">See all repositories on GitHub →</a></div>
   </div>
 </section>
 
@@ -366,9 +369,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
     <p>I'm looking for a final-year internship (PFE) in applied AI starting <b style="color:var(--text)">March 1, 2027</b>. If you're working on vision, speech or LLM systems, I'd love to talk.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:mahdibedja@gmail.com">✉ mahdibedja@gmail.com</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank">LinkedIn</a>
-      <a class="btn ghost" href="cv_eg.pdf" target="_blank">CV (EN)</a>
-      <a class="btn ghost" href="cv_fr.pdf" target="_blank">CV (FR)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn ghost" href="cv_eg.pdf" target="_blank" rel="noopener noreferrer">CV (EN)</a>
+      <a class="btn ghost" href="cv_fr.pdf" target="_blank" rel="noopener noreferrer">CV (FR)</a>
     </div>
   </div>
 </section>
@@ -384,8 +387,10 @@ document.querySelectorAll('.proj').forEach(c=>c.addEventListener('pointermove',e
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-// close mobile menu on click
-document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+// mobile menu
+const links=document.getElementById('links'),burger=document.getElementById('burger');
+burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')});
 // typewriter
 const words=["medical imaging AI.","speech recognition systems.","Agentic RAG with local LLMs.","on-device computer vision.","AI that ships to production."];
 let w=0,i=0,del=false;const t=document.getElementById('typed');
