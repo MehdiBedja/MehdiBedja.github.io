@@ -21,6 +21,8 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .mono{font-family:'JetBrains Mono',monospace}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}
+.avatar{width:64px;height:64px;border-radius:50%;border:2px solid var(--accent);box-shadow:0 0 30px rgba(124,242,201,.35);margin-bottom:22px;display:block}
 #spot{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(600px circle at var(--x,50%) var(--y,20%),var(--glow),transparent 40%)}
 .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at top,#000 10%,transparent 70%);opacity:.35}
 main,nav,footer{position:relative;z-index:1}
@@ -156,6 +158,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 </head>
 <body>
 <div class="grid-bg"></div>
+<canvas id="net"></canvas>
 <div id="spot"></div>
 
 <nav>
@@ -178,6 +181,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/119514351?v=4" alt="Mahdi Bedja">
       <div class="badge"><span class="dot"></span>Open to a PFE internship in applied AI · from March 2027</div>
       <h1>Hi, I'm <span class="grad">Mahdi Bedja</span>.</h1>
       <div class="role">I build <b id="typed"></b><span class="caret"></span></div>
@@ -388,6 +392,20 @@ let w=0,i=0,del=false;const t=document.getElementById('typed');
 (function tick(){const cur=words[w];t.textContent=cur.slice(0,i);
  if(!del&&i<cur.length){i++;setTimeout(tick,55)}else if(!del){del=true;setTimeout(tick,1600)}
  else if(i>0){i--;setTimeout(tick,28)}else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}})();
+
+// neural network background
+(()=>{const c=document.getElementById('net'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+let W,H,P=[],m={x:-999,y:-999};const D=devicePixelRatio||1;
+function rs(){W=innerWidth;H=innerHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);
+ const n=Math.min(90,Math.floor(W*H/16000));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+addEventListener('resize',rs);addEventListener('pointermove',e=>{m.x=e.clientX;m.y=e.clientY});rs();
+(function f(){x.clearRect(0,0,W,H);
+ for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+  const dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<160){p.x+=(p.x-m.x)/dm*.6;p.y+=(p.y-m.y)/dm*.6}}
+ for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+  if(d<130){x.strokeStyle=`rgba(124,242,201,${(1-d/130)*.25})`;x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+ for(const p of P){x.fillStyle='rgba(122,162,255,.7)';x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill()}
+ requestAnimationFrame(f)})()})();
 </script>
 </body>
 </html>
