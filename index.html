@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahdi Bedja — AI Engineer</title>
+<meta name="description" content="Mahdi Bedja — AI Engineer in Paris. Computer vision, speech recognition, LLMs & Agentic RAG. Seeking a final-year AI internship from March 2027.">
+<meta property="og:title" content="Mahdi Bedja — AI Engineer">
+<meta property="og:description" content="Computer vision, medical ASR, Agentic RAG. Seeking a PFE internship in applied AI from March 2027.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/119514351?v=4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0d12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%237cf2c9' font-family='monospace' font-weight='700'>MB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090d; --bg2:#0d1117; --card:#0f141b; --line:#1c2430; --text:#e6edf3; --muted:#8b98a9;
+  --accent:#7cf2c9; --accent2:#7aa2ff; --glow:rgba(124,242,201,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+#spot{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(600px circle at var(--x,50%) var(--y,20%),var(--glow),transparent 40%)}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at top,#000 10%,transparent 70%);opacity:.35}
+main,nav,footer{position:relative;z-index:1}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;backdrop-filter:blur(14px);background:rgba(7,9,13,.7);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+.links a .n{color:var(--accent);font-family:'JetBrains Mono';font-size:12px;margin-right:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:14px;transition:.2s;border:1px solid var(--line);cursor:pointer}
+.btn.primary{background:var(--accent);color:#04120d;border-color:var(--accent)}
+.btn.primary:hover{box-shadow:0 0 30px rgba(124,242,201,.4);transform:translateY(-2px)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
+
+.hero{min-height:calc(100vh - 64px);display:flex;align-items:center;padding:60px 0}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--muted);background:var(--bg2);margin-bottom:28px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(124,242,201,.6)}70%{box-shadow:0 0 0 10px rgba(124,242,201,0)}100%{box-shadow:0 0 0 0 rgba(124,242,201,0)}}
+h1{font-size:clamp(44px,7vw,82px);line-height:1.02;letter-spacing:-.045em;font-weight:800}
+h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(18px,2.4vw,24px);color:var(--muted);margin:20px 0 12px;min-height:1.6em}
+.role b{color:var(--text);font-weight:600}
+.caret{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);max-width:560px;font-size:17px;margin-bottom:34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.socials{display:flex;gap:18px;margin-top:34px}
+.socials a{color:var(--muted);transition:.2s}
+.socials a:hover{color:var(--accent);transform:translateY(-3px)}
+.socials svg{width:22px;height:22px}
+
+.term{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.6),0 0 0 1px rgba(124,242,201,.04)}
+.term-top{display:flex;gap:7px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.term-top i{width:11px;height:11px;border-radius:50%;background:#2a3340}
+.term-top i:nth-child(1){background:#ff5f57}.term-top i:nth-child(2){background:#febc2e}.term-top i:nth-child(3){background:#28c840}
+.term pre{padding:22px;font-family:'JetBrains Mono';font-size:13px;line-height:1.85;color:var(--muted);white-space:pre-wrap}
+.k{color:var(--accent2)}.s{color:var(--accent)}.c{color:#4d5a6b}
+
+section{padding:110px 0}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:50px}
+.sec-head .n{font-family:'JetBrains Mono';color:var(--accent);font-size:15px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;font-weight:800}
+.sec-head .ln{flex:1;height:1px;background:var(--line);max-width:300px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stat b{display:block;font-size:34px;letter-spacing:-.03em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:13px}
+.about p{color:var(--muted);font-size:17px;max-width:760px;margin-bottom:16px}
+.about p b{color:var(--text);font-weight:600}
+
+.exp{display:grid;gap:22px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;position:relative;transition:.3s}
+.job:hover{border-color:#2b3a4a}
+.job-h{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.job h3{font-size:21px;letter-spacing:-.02em}
+.job h3 span{color:var(--accent)}
+.job .when{font-family:'JetBrains Mono';font-size:13px;color:var(--muted)}
+.job .sub{color:var(--muted);font-size:14px;margin-bottom:20px}
+.job ul{list-style:none;display:grid;gap:12px}
+.job li{padding-left:24px;position:relative;color:#b9c4d0;font-size:15px}
+.job li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
+.job li b{color:var(--text)}
+.hl{color:var(--accent);font-weight:600}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column;transition:.3s;position:relative;overflow:hidden}
+.proj::after{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(124,242,201,.08),transparent 50%);opacity:0;transition:.3s;pointer-events:none}
+.proj:hover{transform:translateY(-6px);border-color:#2f4050}
+.proj:hover::after{opacity:1}
+.proj.feat{grid-column:1/-1;background:linear-gradient(135deg,#0f1a1a,#0f141b 60%)}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(124,242,201,.08);color:var(--accent);font-size:22px}
+.proj-links{display:flex;gap:14px;color:var(--muted)}
+.proj-links a:hover{color:var(--accent)}
+.proj-links svg{width:20px;height:20px}
+.proj h3{font-size:21px;letter-spacing:-.02em;margin-bottom:10px}
+.proj p{color:var(--muted);font-size:15px;flex:1}
+.metric{display:inline-block;font-family:'JetBrains Mono';font-size:12px;padding:4px 10px;border-radius:6px;background:rgba(124,242,201,.1);color:var(--accent);margin:14px 0 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags span{font-family:'JetBrains Mono';font-size:12px;color:var(--accent2);background:rgba(122,162,255,.08);padding:4px 10px;border-radius:6px}
+.feat-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px}
+.repo-list{display:grid;gap:10px;align-content:start}
+.repo-list a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-size:14px;background:rgba(0,0,0,.2);transition:.2s}
+.repo-list a:hover{border-color:var(--accent);color:var(--accent)}
+.repo-list small{color:var(--muted);font-family:'JetBrains Mono';font-size:11px}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.sk h4{font-size:15px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sk h4 i{font-style:normal;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:8px;color:#c3cdd8;transition:.2s}
+.chips span:hover{border-color:var(--accent);color:var(--accent)}
+
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.langs{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.lang{flex:1;min-width:180px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.lang b{display:block}.lang span{color:var(--muted);font-size:13px}
+
+.contact{text-align:center;max-width:640px;margin:0 auto}
+.contact h2{font-size:clamp(36px,6vw,58px);letter-spacing:-.04em;font-weight:800;margin:14px 0 18px}
+.contact p{color:var(--muted);font-size:17px;margin-bottom:34px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:13px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero-grid,.feat-grid,.edu{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
+  .links.open{display:flex}
+  .burger{display:block}
+  nav .btn{display:none}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .skills{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .job,.proj{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div id="spot"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo mono">mahdi<span>.</span>bedja</a>
+    <div class="links" id="links">
+      <a href="#about"><span class="n">01.</span>About</a>
+      <a href="#experience"><span class="n">02.</span>Experience</a>
+      <a href="#projects"><span class="n">03.</span>Projects</a>
+      <a href="#skills"><span class="n">04.</span>Skills</a>
+      <a href="#contact"><span class="n">05.</span>Contact</a>
+    </div>
+    <a class="btn ghost" href="cv_eg.pdf" target="_blank">Résumé ↓</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span>Open to a PFE internship in applied AI · from March 2027</div>
+      <h1>Hi, I'm <span class="grad">Mahdi Bedja</span>.</h1>
+      <div class="role">I build <b id="typed"></b><span class="caret"></span></div>
+      <p class="lead">AI Engineer based in Paris. ESI Algiers engineering graduate, now in a Master 2 in Intelligent Systems at Sorbonne Paris Nord. I ship AI from research to production: medical imaging, speech recognition, LLM agents and on-device vision.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View my work →</a>
+        <a class="btn ghost" href="mailto:mahdibedja@gmail.com">Get in touch</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/MehdiBedja" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+        <a href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+        <a href="mailto:mahdibedja@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+      </div>
+    </div>
+    <div class="term reveal">
+      <div class="term-top"><i></i><i></i><i></i></div>
+<pre><span class="c"># mahdi.py</span>
+<span class="k">class</span> <span class="s">AIEngineer</span>:
+    name     = <span class="s">"Mahdi Bedja"</span>
+    location = <span class="s">"Paris, France"</span>
+    school   = [<span class="s">"ESI Algiers"</span>, <span class="s">"Sorbonne Paris Nord"</span>]
+    focus    = [<span class="s">"Computer Vision"</span>, <span class="s">"Speech / ASR"</span>,
+                <span class="s">"LLMs & Agentic RAG"</span>, <span class="s">"Edge AI"</span>]
+    langs    = [<span class="s">"EN C1"</span>, <span class="s">"FR C1"</span>, <span class="s">"AR native"</span>]
+
+    <span class="k">def</span> <span class="s">available</span>(self):
+        <span class="k">return</span> <span class="s">"PFE internship · March 2027"</span></pre>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="n">01.</span><h2>About me</h2><span class="ln"></span></div>
+    <div class="reveal">
+      <p>I'm an AI engineer who likes taking models <b>all the way to production</b>. At <b>BM TECH</b>, a leading Algerian vendor of software for medical labs and hospitals, I spent 10 months building AI for clinicians: chest X-ray pathology detection, French medical speech recognition, real-time dictation and an Agentic RAG assistant over patient records.</p>
+      <p>Before that, my engineering thesis was a complete <b>mobile pest-detection system</b>. I benchmarked a dozen detectors, quantized the best one to TFLite and shipped it inside a native Android app with a Django backend.</p>
+      <p>I'm now doing a <b>Master 2 in Intelligent Systems</b> at Sorbonne Paris Nord and looking for a <span class="hl">final-year internship (PFE) in applied AI starting March 1, 2027</span>.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>93.8%</b><span>mAP@50, edge pest detector</span></div>
+      <div class="stat"><b>3%</b><span>WER, fine-tuned medical Whisper</span></div>
+      <div class="stat"><b>14</b><span>lung pathologies detected on X-rays</span></div>
+      <div class="stat"><b>10 mo</b><span>applied AI in healthcare</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="n">02.</span><h2>Experience</h2><span class="ln"></span></div>
+    <div class="exp">
+      <div class="job reveal">
+        <div class="job-h"><h3>AI Engineer <span>@ BM TECH</span></h3><span class="when">Nov 2025 — Aug 2026</span></div>
+        <div class="sub">Algiers, Algeria · Software for medical laboratories and public & private hospitals</div>
+        <ul>
+          <li><b>Medical imaging:</b> detection, segmentation & classification pipelines for <span class="hl">14 lung pathologies</span> on chest X-rays (YOLO, CNN), plus a separate bone-fracture detection pipeline.</li>
+          <li><b>French medical ASR:</b> built a synthetic speech dataset with Qwen3 voice cloning from real radiology reports, then fine-tuned Whisper to <span class="hl">3% WER</span>.</li>
+          <li><b>Real-time medical dictation:</b> Dragon Medical-style streaming system on WhisperLiveKit / faster-whisper with fuzzy matching & voice commands, reaching <span class="hl">8% WER live</span>.</li>
+          <li><b>Agentic RAG:</b> designed a patient-document Q&A system with LangChain and locally hosted Qwen models over clinical records.</li>
+          <li><b>Interoperability R&D:</b> dense LOINC embeddings with Qwen to semantically match lab test results across hospitals.</li>
+          <li><b>Industrialization:</b> Dockerized services with structured logging and built-in monitoring.</li>
+        </ul>
+        <div class="tags"><span>PyTorch</span><span>YOLO</span><span>Whisper</span><span>Qwen</span><span>LangChain</span><span>Docker</span></div>
+      </div>
+      <div class="job reveal">
+        <div class="job-h"><h3>Engineering Intern <span>@ CM Consulting</span></h3><span class="when">Jul 2024 — Aug 2024</span></div>
+        <div class="sub">Algiers, Algeria</div>
+        <ul>
+          <li>Built a Python tool that extracts and structures data from PDF tenders (spaCy, pdfplumber), with a Tkinter UI and automatic generation of formatted reports.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>spaCy</span><span>pdfplumber</span><span>Tkinter</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="n">03.</span><h2>Things I've built</h2><span class="ln"></span></div>
+    <div class="projects">
+      <article class="proj feat reveal">
+        <div class="feat-grid">
+          <div>
+            <div class="proj-top"><div class="ico">🌾</div>
+              <div class="proj-links"><a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+            </div>
+            <p class="mono" style="color:var(--accent);font-size:12px;flex:0;margin-bottom:8px">FEATURED · ENGINEERING THESIS</p>
+            <h3>Mobile Agricultural Pest Detection System</h3>
+            <p>End-to-end system for real-time pest identification in rural areas. I benchmarked YOLOv7–v11, SSD and Faster R-CNN on IP102 with custom balancing and augmentation, then quantized YOLOv11s to TFLite for <b>fully offline on-device inference</b> in a native Android app. It recognizes 13 pests, maps each one to a treatment, and syncs to a Django/PostgreSQL backend on Render whenever the device gets a connection.</p>
+            <span class="metric">93.8% mAP@50 · YOLOv11s · TFLite</span>
+            <div class="tags"><span>PyTorch</span><span>Ultralytics</span><span>TFLite</span><span>Kotlin</span><span>Jetpack Compose</span><span>Django</span><span>PostgreSQL</span><span>Cloudinary</span></div>
+          </div>
+          <div class="repo-list">
+            <a href="https://github.com/MehdiBedja/pest-detection-system" target="_blank"><span>📦 pest-detection-system</span><small>overview</small></a>
+            <a href="https://github.com/MehdiBedja/pest-detection-computer-vision" target="_blank"><span>🧠 pest-detection-computer-vision</span><small>AI research</small></a>
+            <a href="https://github.com/MehdiBedja/pest_detection_app_frontend" target="_blank"><span>📱 pest_detection_app_frontend</span><small>Kotlin</small></a>
+            <a href="https://github.com/MehdiBedja/pest_detection_app_backend" target="_blank"><span>⚙️ pest_detection_app_backend</span><small>Django</small></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-top"><div class="ico">⚖️</div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/elastic_search" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+        </div>
+        <h3>Intelligent Legal Monitoring + LLM Chatbot</h3>
+        <p>LLM chatbot that answers questions about legal texts, on a Django + React platform. New laws are scraped with Selenium, indexed in Elasticsearch for advanced search, and pushed to subscribers as notifications.</p>
+        <div class="tags"><span>LLM</span><span>Django</span><span>React</span><span>Elasticsearch</span><span>Selenium</span></div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-top"><div class="ico">🐘</div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/SGBD" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+        </div>
+        <h3>Automated PostgreSQL CI/CD with Jenkins</h3>
+        <p>Automated database delivery: deployed on Render, schema versioned with Flyway migrations, tested with pgTAP, all run through a Jenkins CI/CD pipeline.</p>
+        <div class="tags"><span>PostgreSQL</span><span>Jenkins</span><span>Flyway</span><span>pgTAP</span><span>Render</span></div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-top"><div class="ico">📄</div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/AutomateDocsFilling" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+        </div>
+        <h3>Automated Document Filling</h3>
+        <p>Automation pipeline that generates and fills formatted documents from structured data with LaTeX templates, replacing repetitive manual paperwork.</p>
+        <div class="tags"><span>Python</span><span>LaTeX</span><span>Automation</span></div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-top"><div class="ico">📅</div>
+          <div class="proj-links"><a href="https://github.com/MehdiBedja/Reservation-app-frontend" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg></a></div>
+        </div>
+        <h3>Reservation App (Android + Node)</h3>
+        <p>Full-stack reservation app: a native Kotlin Android client with dependency injection via Dagger/Hilt, backed by a JavaScript REST API.</p>
+        <div class="tags"><span>Kotlin</span><span>Hilt</span><span>Node.js</span><span>REST</span></div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="https://github.com/MehdiBedja?tab=repositories" target="_blank">See all repositories on GitHub →</a></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="n">04.</span><h2>Skills & Education</h2><span class="ln"></span></div>
+    <div class="skills">
+      <div class="sk reveal"><h4><i>◆</i>Generative AI & LLMs</h4><div class="chips"><span>Agentic RAG</span><span>LangChain</span><span>LLM Agents</span><span>Local LLMs (Qwen)</span><span>Dense Embeddings</span></div></div>
+      <div class="sk reveal"><h4><i>◆</i>Speech & Vision</h4><div class="chips"><span>Whisper fine-tuning</span><span>Streaming ASR</span><span>TTS</span><span>YOLO</span><span>SSD</span><span>Faster R-CNN</span><span>Segmentation</span></div></div>
+      <div class="sk reveal"><h4><i>◆</i>ML Frameworks</h4><div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Hugging Face</span><span>TFLite</span><span>spaCy</span><span>OpenCV</span></div></div>
+      <div class="sk reveal"><h4><i>◆</i>Backend & Mobile</h4><div class="chips"><span>Python</span><span>Django</span><span>REST APIs</span><span>PostgreSQL</span><span>Elasticsearch</span><span>Kotlin</span><span>Jetpack Compose</span></div></div>
+      <div class="sk reveal"><h4><i>◆</i>MLOps & Infra</h4><div class="chips"><span>Docker</span><span>Jenkins CI/CD</span><span>Git</span><span>Logging</span><span>Monitoring</span><span>Render</span></div></div>
+      <div class="sk reveal"><h4><i>◆</i>Interests</h4><div class="chips"><span>Applied AI & GenAI research</span><span>Algorithmic problem solving</span><span>Open source</span></div></div>
+    </div>
+
+    <div class="edu" style="margin-top:22px">
+      <div class="job reveal">
+        <div class="job-h"><h3>Master 2 · <span>Intelligent Systems</span></h3><span class="when">2026 — now</span></div>
+        <div class="sub" style="margin:0">Sorbonne Paris Nord University · Paris, France</div>
+      </div>
+      <div class="job reveal">
+        <div class="job-h"><h3>Engineer's Degree · <span>Computer Science</span></h3><span class="when">2020 — 2025</span></div>
+        <div class="sub" style="margin:0">ESI, École nationale Supérieure d'Informatique · Algiers</div>
+      </div>
+    </div>
+    <div class="langs reveal">
+      <div class="lang"><b>🇬🇧 English, C1</b><span>IELTS 7.5</span></div>
+      <div class="lang"><b>🇫🇷 French, C1</b><span>TCF C1</span></div>
+      <div class="lang"><b>🇩🇿 Arabic</b><span>Native</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact reveal">
+    <span class="mono" style="color:var(--accent)">05. What's next?</span>
+    <h2>Let's build something intelligent.</h2>
+    <p>I'm looking for a final-year internship (PFE) in applied AI starting <b style="color:var(--text)">March 1, 2027</b>. If you're working on vision, speech or LLM systems, I'd love to talk.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:mahdibedja@gmail.com">✉ mahdibedja@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/mahdi-bedja-0b94031b3/" target="_blank">LinkedIn</a>
+      <a class="btn ghost" href="cv_eg.pdf" target="_blank">CV (EN)</a>
+      <a class="btn ghost" href="cv_fr.pdf" target="_blank">CV (FR)</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Designed & built by Mahdi Bedja · Paris · <span id="yr"></span></div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// spotlight
+addEventListener('pointermove',e=>{const s=document.getElementById('spot').style;s.setProperty('--x',e.clientX+'px');s.setProperty('--y',e.clientY+'px')});
+document.querySelectorAll('.proj').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// close mobile menu on click
+document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+// typewriter
+const words=["medical imaging AI.","speech recognition systems.","Agentic RAG with local LLMs.","on-device computer vision.","AI that ships to production."];
+let w=0,i=0,del=false;const t=document.getElementById('typed');
+(function tick(){const cur=words[w];t.textContent=cur.slice(0,i);
+ if(!del&&i<cur.length){i++;setTimeout(tick,55)}else if(!del){del=true;setTimeout(tick,1600)}
+ else if(i>0){i--;setTimeout(tick,28)}else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}})();
+</script>
+</body>
+</html>
