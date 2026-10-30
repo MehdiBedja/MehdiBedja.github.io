@@ -41,7 +41,7 @@ test('local files referenced by the page exist', () => {
   const local = [...attr('href'), ...attr('src')].filter(
     (u) => u && !/^(https?:|mailto:|data:|#)/.test(u)
   );
-  assert.ok(local.includes('cv_eg.pdf'));
+  assert.ok(local.includes('img/pest-app.jpg'));
   for (const f of local) assert.ok(fs.existsSync(path.join(root, f)), `missing file ${f}`);
 });
 
